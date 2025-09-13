@@ -1,61 +1,63 @@
-BOILERPLATE-GOFIBER-GORM
-Build Fast, Scale Confidently, Innovate Fearlessly
+# BOILERPLATE-GOFIBER-GORM
 
-last-commit repo-top-language repo-language-count
-Built with the tools and technologies:
+**Build Fast, Scale Confidently, Innovate Fearlessly**
 
-JSON Swagger NOW Go YAML
+![Go](https://img.shields.io/badge/Go-1.22+-00ADD8?logo=go)
+![Fiber](https://img.shields.io/badge/Fiber-v2-00BFFF?logo=fiber)
+![GORM](https://img.shields.io/badge/GORM-latest-green)
+![Swagger](https://img.shields.io/badge/Swagger-API-green?logo=swagger)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-Table of Contents
-Overview
-Getting Started
-Prerequisites
-Installation
-Usage
-Testing
-Overview
-Boilerplate-gofiber-gorm is a comprehensive starter template for building scalable, database-driven web APIs using Go, Fiber, and GORM. It streamlines the development of RESTful services with built-in support for CRUD operations, PostgreSQL integration, and automatic schema migrations.
+---
 
-Why boilerplate-gofiber-gorm?
+## 📑 Table of Contents
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Testing](#testing)
+- [Features](#features)
+- [Project Structure](#project-structure)
 
-This project simplifies the process of creating reliable, maintainable web applications. The core features include:
+---
 
-🛠️ CRUD Operations: Fully implemented customer management endpoints with validation and structured responses.
-🌐 API Documentation: Integrated Swagger docs for easy API exploration and client integration.
-🔌 Database Connectivity: Seamless PostgreSQL connection setup with automatic schema migrations.
-⚙️ Modular Architecture: Clear separation of configuration, handlers, services, and repositories for maintainability.
-📦 Dependency Management: Ensures consistent builds with checksum verification via go.sum and go.mod.
-🚀 Fast Startup: Efficient server initialization with organized routing and middleware setup.
-Getting Started
-Prerequisites
-This project requires the following dependencies:
+## 🌐 Overview
 
-Programming Language: Go
-Package Manager: Go modules
-Installation
-Build boilerplate-gofiber-gorm from the source and install dependencies:
+**boilerplate-gofiber-gorm** is a comprehensive starter template for building scalable, database-driven web APIs using **Go**, **Fiber**, and **GORM**.  
+It streamlines the development of RESTful services with built-in support for:
+
+- CRUD operations
+- PostgreSQL integration
+- Automatic schema migrations
+- API documentation via Swagger
+
+---
+
+## 🚀 Why boilerplate-gofiber-gorm?
+
+This project simplifies creating reliable and maintainable web applications.  
+Key features include:
+
+- 🛠️ **CRUD Operations**: Prebuilt endpoints (Customer) with validation and structured responses.  
+- 🌐 **API Documentation**: Integrated **Swagger UI** for easy API exploration.  
+- 🔌 **Database Connectivity**: Seamless PostgreSQL connection with AutoMigrate.  
+- ⚙️ **Modular Architecture**: Config, Handlers, Services, Repositories all separated.  
+- 📦 **Dependency Management**: Go modules with `go.mod` and `go.sum`.  
+- 🚀 **Fast Startup**: Organized routing + middleware setup.
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+- [Go](https://go.dev/dl/) (1.22+ recommended)
+- [PostgreSQL](https://www.postgresql.org/) (or Docker)
+
+### Installation
 
 Clone the repository:
 
-❯ git clone https://github.com/AhmadHafidz1316/boilerplate-gofiber-gorm
-Navigate to the project directory:
-
-❯ cd boilerplate-gofiber-gorm
-Install the dependencies:
-
-Using go modules:
-
-❯ go build
-Usage
-Run the project with:
-
-Using go modules:
-
-go run {entrypoint}
-Testing
-Boilerplate-gofiber-gorm uses the {test_framework} test framework. Run the test suite with:
-
-Using go modules:
-
-go test ./...
-⬆ Return
+```bash
+git clone https://github.com/AhmadHafidz1316/boilerplate-gofiber-gorm
+cd boilerplate-gofiber-gorm
