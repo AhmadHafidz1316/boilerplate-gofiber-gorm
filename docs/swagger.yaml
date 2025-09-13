@@ -1,0 +1,175 @@
+basePath: /api/v1
+definitions:
+  domain.Customer:
+    properties:
+      created_at:
+        type: string
+      email:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  response.Envelope:
+    properties:
+      code:
+        type: string
+      data: {}
+      errors: {}
+      message:
+        type: string
+    type: object
+  service.CreateCustomerInput:
+    properties:
+      email:
+        type: string
+      name:
+        minLength: 2
+        type: string
+    required:
+    - name
+    type: object
+  service.UpdateCustomerInput:
+    properties:
+      email:
+        type: string
+      name:
+        minLength: 2
+        type: string
+    type: object
+host: localhost:3000
+info:
+  contact: {}
+  description: This is a sample CRUD API with Fiber v2 + GORM + Swagger
+  title: Go Fiber + GORM API
+  version: "1.0"
+paths:
+  /customers:
+    get:
+      description: Retrieve all customers from the database
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/domain.Customer'
+            type: array
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.Envelope'
+      summary: Get list of customers
+      tags:
+      - customers
+    post:
+      consumes:
+      - application/json
+      description: Add a new customer to the database
+      parameters:
+      - description: Customer data
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/service.CreateCustomerInput'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/domain.Customer'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Envelope'
+      summary: Create a new customer
+      tags:
+      - customers
+  /customers/{id}:
+    delete:
+      description: Remove a customer from the database by its ID
+      parameters:
+      - description: Customer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "204":
+          description: No Content
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.Envelope'
+      summary: Delete customer by ID
+      tags:
+      - customers
+    get:
+      description: Retrieve a single customer by its ID
+      parameters:
+      - description: Customer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.Customer'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.Envelope'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/response.Envelope'
+      summary: Get customer by ID
+      tags:
+      - customers
+    put:
+      consumes:
+      - application/json
+      description: Update an existing customer by its ID
+      parameters:
+      - description: Customer ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Updated data
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/service.UpdateCustomerInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/domain.Customer'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Envelope'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.Envelope'
+      summary: Update customer by ID
+      tags:
+      - customers
+swagger: "2.0"
