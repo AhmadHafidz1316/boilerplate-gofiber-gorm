@@ -91,7 +91,7 @@ Run unit tests:
 go test ./...
 ```
 
-## Feature
+## Features
 
 ✅ Auto CRUD boilerplate
 ✅ Fiber v2 HTTP framework
