@@ -69,7 +69,7 @@ Install dependencies:
 go mod tidy
 ```
 
-## <b>Usage</b>
+## Usage
 
 Run the project:
 
@@ -83,7 +83,7 @@ Server runs at:
 Swagger docs at:
 👉 http://localhost:3000/swagger/index.html
 
-## <b>Testing</b>
+## Testing
 
 Run unit tests:
 
@@ -91,7 +91,7 @@ Run unit tests:
 go test ./...
 ```
 
-## ✨ features
+## Feature
 
 ✅ Auto CRUD boilerplate
 ✅ Fiber v2 HTTP framework
@@ -100,7 +100,7 @@ go test ./...
 ✅ Swagger auto-generated docs
 ✅ Modular, maintainable folder structure
 
-## 📂 Project Structure
+## Project Structure
 
 ```bash
 .
