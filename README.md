@@ -61,3 +61,61 @@ Clone the repository:
 ```bash
 git clone https://github.com/AhmadHafidz1316/boilerplate-gofiber-gorm
 cd boilerplate-gofiber-gorm
+```
+
+Install dependencies:
+
+```bash
+go mod tidy
+```
+
+<b>Usage</b>
+
+Run the project:
+
+```bash
+go run ./cmd/server
+```
+
+Server runs at:
+👉 http://localhost:3000
+
+Swagger docs at:
+👉 http://localhost:3000/swagger/index.html
+
+<b>Testing</b>
+
+Run unit tests:
+
+```bash
+go test ./...
+```
+
+✨ Features
+
+✅ Auto CRUD boilerplate
+✅ Fiber v2 HTTP framework
+✅ GORM ORM
+✅ PostgreSQL integration
+✅ Swagger auto-generated docs
+✅ Modular, maintainable folder structure
+
+📂 Project Structure
+
+```bash
+.
+├── cmd/
+│   └── server/          # Main entrypoint
+├── internal/
+│   ├── config/          # App config & env
+│   ├── db/              # Database connection + migrations
+│   ├── domain/          # Entities + interfaces
+│   ├── repository/      # DB access layer
+│   ├── service/         # Business logic
+│   └── transport/http/  # Handlers + routers
+├── pkg/                 # Helpers (response wrapper, utils, etc)
+├── docs/                # Swagger generated docs
+├── .env                 # Environment variables
+├── go.mod
+└── go.sum
+```
